@@ -63,20 +63,3 @@ function animate() {
 }
 
 animate();
-
-setTimeout(() => {
-    document.querySelector('.title').innerText = "Feliz Ano Novo 2024";
-    document.querySelector('.title').classList.add('fade-in');
-}, 1000);
-
-setTimeout(() => {
-    document.querySelector('.title').innerText = "Feliz Ano Novo 2025";
-    document.querySelector('.title').classList.add('fade-in');
-    document.querySelector('#yearChange').classList.add('fade-in');
-}, 3000);
-
-setTimeout(() => {
-    const yearElement = document.querySelector('#yearChange');
-    yearElement.innerText = '2025';
-    yearElement.classList.add('fade-in');
-}, 5000);
