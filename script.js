@@ -38,6 +38,19 @@ particles.setAttribute('color', new THREE.BufferAttribute(colors, 3));
 const particleSystem = new THREE.Points(particles, particleMaterial);
 scene.add(particleSystem);
 
+// Adicionar estrelas
+const starGeometry = new THREE.SphereGeometry(0.5, 24, 24);
+const starMaterial = new THREE.MeshBasicMaterial({ color: 0xffffff });
+for (let i = 0; i < 500; i++) {
+    const star = new THREE.Mesh(starGeometry, starMaterial);
+    star.position.set(
+        (Math.random() - 0.5) * 2000,
+        (Math.random() - 0.5) * 2000,
+        (Math.random() - 0.5) * 2000
+    );
+    scene.add(star);
+}
+
 camera.position.z = 200;
 
 function animateParticles() {
