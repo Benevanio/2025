@@ -51,6 +51,25 @@ for (let i = 0; i < 500; i++) {
     scene.add(star);
 }
 
+// Adicionar texto "Feliz 2025"
+const loader = new THREE.FontLoader();
+loader.load('https://threejs.org/examples/fonts/helvetiker_regular.typeface.json', function (font) {
+    const textGeometry = new THREE.TextGeometry('Feliz 2025', {
+        font: font,
+        size: 80,
+        height: 5,
+        curveSegments: 12,
+        bevelEnabled: true,
+        bevelThickness: 10,
+        bevelSize: 8,
+        bevelSegments: 5
+    });
+    const textMaterial = new THREE.MeshBasicMaterial({ color: 0xffff00 });
+    const textMesh = new THREE.Mesh(textGeometry, textMaterial);
+    textMesh.position.set(-400, 0, 0);
+    scene.add(textMesh);
+});
+
 camera.position.z = 200;
 
 function animateParticles() {
