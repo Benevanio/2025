@@ -21,7 +21,7 @@ Este é um projeto que cria uma animação visual de partículas utilizando **Th
 1. **Clone o repositório**:
 
    ```bash
-   git clone https://github.com/seu-usuario/feliz-ano-novo-2024-para-2025.git
+   git clone https://github.com/Benevanio/2025
    ```
 
 2. **Abra o arquivo HTML**:
